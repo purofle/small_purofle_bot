@@ -8,3 +8,9 @@ dependencies = [
     "aiogram>=3.25.0",
     "openai>=2.21.0",
 ]
+
+[tool.uv]
+constraint-dependencies = [
+    "aiohttp>=3.14.1",
+    "idna>=3.15",
+]
