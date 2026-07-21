@@ -46,6 +46,8 @@ async def main() -> None:
         client=ai_client,
         model_name=getenv("OPENAI_MODEL_NAME", "gpt-5.2-chat"),
         superuser_id=SUPERUSER_ID,
+        context_token_limit=int(getenv("CONTEXT_TOKEN_LIMIT", "256000")),
+        response_token_reserve=int(getenv("RESPONSE_TOKEN_RESERVE", "16000")),
     )
     # And the run events dispatching
     await bot.delete_webhook(True)
